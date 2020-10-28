@@ -38,12 +38,12 @@ Every fuzzing script has a help option showing which arguments can and must be s
 
 Nevertheless here is an overview:
 
---debug , -d = attach debugger (process monitor) to process
---command = command that debugger shall start
---udp = use udp instead of tcp as layer 4 protocol
---dport , -dp = local port of the debugger (default = 26002)
---host = target host address for fuzzing
---port = target port for fuzzing
+--debug , -d = attach debugger (process monitor) to process  
+--command = command that debugger shall start  
+--udp = use udp instead of tcp as layer 4 protocol  
+--dport , -dp = local port of the debugger (default = 26002)  
+--host = target host address for fuzzing  
+--port = target port for fuzzing  
 
 If you want to use the process-monitor (taken from Boofuzz), start it first as follows
 
@@ -56,4 +56,3 @@ Now start the preferred fuzzing script: (Example MMS)
 `python3 mms.py -d -dp 26002 --host 127.0.0.1 --port 102 --command "PATH TO TARGET APPLICATION" `
 
 This should start the fuzzing process.
-
